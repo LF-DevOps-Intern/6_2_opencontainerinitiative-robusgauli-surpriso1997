@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pg-depl
+spec:
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      volumes:
+        - name: pg-pv
+          persistentVolumeClaim:
+            claimName: pg-pvc
+      containers:
+        - name: postgres
+          image: kubepost
+          envFrom:
+            - configMapRef:
+                name: pg-config-map
+          volumeMounts:
+            - name: pg-pv
+              mountPath: /var/lib/postgresql/data

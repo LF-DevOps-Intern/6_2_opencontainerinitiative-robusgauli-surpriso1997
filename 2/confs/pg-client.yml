@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pg-client-depl
+spec:
+  selector:
+    matchLabels:
+      app: pg-client
+  template:
+    metadata:
+      labels:
+        app: pg-client
+    spec:
+      containers:
+        - name: pg-client
+          image: postgres
+          envFrom:
+            - configMapRef:
+                name: pg-client-config-map
