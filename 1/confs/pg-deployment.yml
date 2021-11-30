@@ -17,7 +17,7 @@ spec:
             claimName: pg-pvc
       containers:
         - name: postgres
-          image: kubepost
+          image: pg-db-image
           envFrom:
             - configMapRef:
                 name: pg-config-map
