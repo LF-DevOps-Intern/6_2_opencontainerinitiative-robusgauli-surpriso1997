@@ -130,7 +130,7 @@ Those k8 components were created using `k apply -f` command.
 
 4.  Created service
 
-    ![creating docker image](https://github.com/LF-DevOps-Intern/6_2_opencontainerinitiative-robusgauli-surpriso1997/blob/master/1/screenshots/created pg service.png)
+    ![creating docker image](https://github.com/LF-DevOps-Intern/6_2_opencontainerinitiative-robusgauli-surpriso1997/blob/master/1/screenshots/created%20pg%20service.png)
 
 5.  Created config map
 
