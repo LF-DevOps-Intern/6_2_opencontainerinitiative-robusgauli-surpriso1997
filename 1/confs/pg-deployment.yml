@@ -18,6 +18,7 @@ spec:
       containers:
         - name: postgres
           image: pg-db-image
+          imagePullPolicy: Never
           envFrom:
             - configMapRef:
                 name: pg-config-map

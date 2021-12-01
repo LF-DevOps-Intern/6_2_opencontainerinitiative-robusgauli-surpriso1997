@@ -17,3 +17,4 @@ spec:
           envFrom:
             - configMapRef:
                 name: pg-client-config-map
+
